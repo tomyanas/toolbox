@@ -3,7 +3,7 @@
 function bubbleSortV1(array) {
     let length = array.length, aux;
     for (let i = 0; i < length; i++) {
-        for(var j = 0 ; j < length - i - 1; j++){
+        for(var j = 0 ; j < length; j++){
             if (array[j] > array[j + 1]) {
               aux = array[j];
               array[j] = array[j+1];
@@ -18,7 +18,7 @@ function bubbleSortV1(array) {
 function bubbleSortV2(array) {
     let length = array.length, left, right;
     for (let i = 0; i < length; i++) {
-        for(var j = i ; j < length; j++){
+        for(var j = 0 ; j < length; j++){
             left = array[j];
             right = array[j + 1]
             if ( left > right ) {
@@ -29,7 +29,14 @@ function bubbleSortV2(array) {
     }
     return array;
   }
-  //__________Tests___________
+
+// _____ para hacer debug y ver como funciona agregar las siguientes lineas dentro del segundo for_____
+
+//   console.log(`i: ${i} - j: ${j}`);
+//   console.log(`array[i]: ${array[i]} | array[j]: ${array[j]}`);
+  
+
+//__________Tests___________
 
   let arrayUnordered = [5, 2, 8, 9, 0, 3, 1, 4, 6, 7];
   let arrayBubbleV1 = bubbleSortV1(arrayUnordered);
@@ -37,3 +44,5 @@ function bubbleSortV2(array) {
   console.log('Array Unordered= ', arrayUnordered);
   console.log('Array Ordered BubbleV1= ', arrayBubbleV1);
   console.log('Array Ordered BubbleV2= ', arrayBubbleV2);
+
+
